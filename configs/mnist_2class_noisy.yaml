@@ -1,0 +1,19 @@
+# NAP 攻击实验的配置：在含去极化噪声的分类器上评估
+# 注: 一般 NAP 不训新模型, 而是用预训练的干净模型 + 攻击时加噪
+# 这个配置用于 train_classifier.py 训一个"原生含噪"的模型做对照实验
+
+dataset: mnist
+classes: [0, 1]
+image_size: 16
+n_per_class: 200
+depth: 10
+epochs: 25
+batch_size: 32
+lr: 0.01
+seed: 42
+output_dir: results/classifiers
+tag: mnist_2c_d10_depol05
+
+noise:
+  type: depolarizing
+  strength: 0.05

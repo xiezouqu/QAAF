@@ -1,0 +1,20 @@
+# Fashion-MNIST 二分类实验配置（T-shirt/Top vs Trouser）
+# FMNIST 比 MNIST 更难, 模型精度通常低 5-10%
+# 用法:
+#   python scripts/train_classifier.py --config configs/fmnist_2class.yaml
+
+dataset: fmnist
+classes: [0, 1]
+image_size: 16
+n_per_class: 200
+depth: 10
+epochs: 25
+batch_size: 32
+lr: 0.01
+seed: 42
+output_dir: results/classifiers
+tag: fmnist_2c_d10
+
+noise:
+  type: none
+  strength: 0.0

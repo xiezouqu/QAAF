@@ -1,0 +1,20 @@
+# MNIST 二分类实验配置（类别 0 vs 1）
+# 用法:
+#   python scripts/train_classifier.py --config configs/mnist_2class.yaml
+
+dataset: mnist
+classes: [0, 1]
+image_size: 16         # 16x16 = 256 维 -> 8 数据 qubit
+n_per_class: 200
+depth: 10              # PQC 层数
+epochs: 20
+batch_size: 32
+lr: 0.01
+seed: 42
+output_dir: results/classifiers
+tag: mnist_2c_d10
+
+# 训练时不加噪声 (一般先训纯净模型, 再在攻击阶段加噪测试)
+noise:
+  type: none
+  strength: 0.0

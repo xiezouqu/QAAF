@@ -1,0 +1,20 @@
+# MNIST 四分类实验配置（类别 0、1、2、3）
+# 4 分类需要 2 个辅助 qubit (2^2 = 4)
+# 用法:
+#   python scripts/train_classifier.py --config configs/mnist_4class.yaml
+
+dataset: mnist
+classes: [0, 1, 2, 3]
+image_size: 16
+n_per_class: 150
+depth: 20              # 4 分类比 2 分类难, 层数加倍
+epochs: 30
+batch_size: 32
+lr: 0.01
+seed: 42
+output_dir: results/classifiers
+tag: mnist_4c_d20
+
+noise:
+  type: none
+  strength: 0.0
