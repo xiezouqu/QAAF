@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 数据集 (运行时下载)
+data/MNIST/
+data/FashionMNIST/
+
+# 训练产物 (体积大)
+results/classifiers/*.pkl
+results/classifiers/*.pt
+results/attacks/*.npz
+
+# 日志
+logs/*.log
+
+# IDE
+.idea/
+.vscode/
